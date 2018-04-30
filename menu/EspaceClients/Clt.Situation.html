@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0 minimal-ui"/>
+	<meta name="apple-mobile-web-app-capable" content="yes"/>
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+    <title>EpsyCom Mobile</title>
+
+    <!-- JavaScript -->
+	<script type="text/javascript" src="../../js/jquery.js"></script>
+	<script type="text/javascript" src="../../js/jqueryui.js"></script>
+	<script type="text/javascript" src="../../js/framework.plugins.js"></script>
+	<script type="text/javascript" src="../../js/custom.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.0/angular.min.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.0/angular-animate.min.js"></script> 
+	<script src="../../js/v-accordion.js"></script>
+	<script src="../../js/JsClients/Main.Controller.Clt.Sit.js"></script>
+	<script type="text/javascript" charset="utf-8" src="../../cordova.js"></script>
+	<script type="text/javascript" src="../../js/quitter.js"></script>
+	<!-- Syle CSS -->
+	<link href="../../css/v-accordion.css" rel="stylesheet">
+	<link href="../../css/style.css"     		 rel="stylesheet" type="text/css">
+	<link href="../../css/menu.css"     		 rel="stylesheet" type="text/css">
+	<link href="../../css/framework.css" 		 rel="stylesheet" type="text/css">
+	<link href="../../css/owl.theme.css" 		 rel="stylesheet" type="text/css">
+	<link href="../../css/swipebox.css"		 rel="stylesheet" type="text/css">
+	<link href="../../css/font-awesome.css"	 rel="stylesheet" type="text/css">
+	<link href="../../css/animate.css"			 rel="stylesheet" type="text/css">
+
+  </head>
+
+  <body ng-app="myApp">
+	<!-- Loading page --> 
+	
+	<div id="preloader">
+		<div id="status">
+			<p class="center-text">
+				Chargement des données...
+			</p>
+		</div>
+	</div>
+	
+	<!-- Header page --> 
+   
+	<div class="all-elements">  
+		<div class="header">
+					<a class="header-espace-clt"><h4>Espace clients</h4></a>
+				<div class="header-icons">
+					<a class="bg-green2 show-share-bottom" href="#"><i class="fa fa-share"></i></a> 
+				</div>
+		<div class="decoration"></div>
+		</div>
+		
+		<div class="header-clear"></div>
+		
+		
+    <!-- Content page -->
+	
+	<div class="content-client">  
+	
+		<div ng-cloak class="u-wideWrapper u-paddingHm u-paddingTl" ng-controller="MainController">
+
+			  <div class="Grid Grid--gutters md-Grid--2col">
+				<div class="Grid-cell u-marginBl">
+				  <h4>Situation client :</h4> 
+				  <v-accordion class="vAccordion--default">
+					<v-pane  ng-repeat="data in empData" expanded="$first">
+					  <v-pane-header >
+						<h5>{{data.Commercial.libelle}}</h5>
+					  </v-pane-header>
+
+					  <v-pane-content >
+					    <ul>
+						<li class= "liDossier" ng-style="data.Commercial.couleur === 'V' && {'color':'green'} || data.Commercial.couleur === 'R' && {'color':'red'} ">Montant TTC : {{data.Commercial.montant}}</li>
+					
+						
+						<ul> 
+					  </v-pane-content>
+					</v-pane>
+
+				  </v-accordion>
+				</div>
+			</div>
+		</div>
+	</div>  
+
+   <!--Menu footer --> 
+	<div class="share-bottom">
+    <h3>Menu</h3>
+			<div class="share-socials-bottom">
+				
+				<a href="../../home-page.html">
+					<i class="fa fa-acceuil acceuil-color"></i>
+					Acceuil
+				</a>
+				<a href="../IndicateursCles/Indicateurs.cles.html">
+					<i class="fa fa-indicateurs indicateur-color"></i>
+					Indicateurs
+				</a>
+				<a href="../EspaceAchats/Espace.Achats.html">
+					<i class="fa fa-achats achats-color"></i>
+					Achats
+				</a>				
+				<a href="../EspaceStock/Espace.Stock.html">
+					<i class="fa fa-stock stock-color"></i>
+					Stock
+				</a>
+				<a href="../EspaceVentes/Espace.Ventes.html">
+					<i class="fa fa-ventes ventes-color"></i>
+					Ventes
+				</a>
+				<a href="../EspaceTresorerie/Espace.Tresorerie.html">
+					<i class="fa fa-tresorerie tresorerie-color"></i>
+					Trésorerie
+				</a>				
+				<a href="#">
+					<i class="fa fa-production production-color"></i>
+					Production
+				</a>
+				<a href="../EspaceFournisseurs/Espace.Fournisseurs.html">
+					<i class="fa fa-fournisseurs fournisseurs-color"></i>
+					Fournisseurs
+				</a>
+				<a href="../EspaceClients/Espace.Clients.html">
+					<i class="fa fa-clients clients-color"></i>
+					Clients
+				</a>
+				<a href="../EspaceArticles/Espace.Articles.html">
+					<i class="fa fa-articles articles-color"></i>
+					Articles
+				</a>
+				<a href="../../apropos.html">
+					<i class="fa fa-apropos apropos-color"></i>
+					A propos
+				</a> 
+				  
+				<a href="#" onClick="exitFromApp();" data-role="button" style="text-align:center">
+					
+					<i class="fa fa-quitter quitter-color"></i>
+					Quitter  </a>
+					
+			</div>
+		<a href="#" class="close-share-bottom">Fermer</a>
+	</div>
+
+</body>
+</html>

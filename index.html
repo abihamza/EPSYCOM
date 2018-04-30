@@ -1,0 +1,82 @@
+<html ng-app="app">	<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0 minimal-ui"/>
+<meta name="apple-mobile-web-app-capable" content="yes"/>
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+<title>EspyCom Mobile</title>
+<!-- Style Css -->
+<link href="css/style.css"     		 rel="stylesheet" type="text/css">
+<link href="css/menu.css"     		 rel="stylesheet" type="text/css">
+<link href="css/framework.css" 		 rel="stylesheet" type="text/css">
+<link href="css/owl.theme.css" 		 rel="stylesheet" type="text/css">
+<link href="css/swipebox.css"		 rel="stylesheet" type="text/css">
+<link href="css/font-awesome.css"	 rel="stylesheet" type="text/css">
+<link href="css/animate.css"			 rel="stylesheet" type="text/css">
+<!-- JavaScript -->
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/jqueryui.js"></script>
+<script type="text/javascript" src="js/framework.plugins.js"></script>
+<script type="text/javascript" src="js/custom.js"></script>
+<script src= "http://ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular.min.js"></script>
+<script type="text/javascript" src="js/login.js"></script>
+<script type="text/javascript" charset="utf-8" src="cordova.js"></script>
+<script type="text/javascript" src="js/quitter.js"></script>
+<script type="text/javascript" src="js/ngStorage.min.js"></script>
+
+</head>
+		<!-- Loading page --> 
+	
+	<div id="preloader">
+		<div id="status">
+			<p class="center-text">
+				Chargement des données...
+			</p>
+		</div>
+	</div>
+		  
+		<div class="header">
+			<div class="header-login" ><h2>EspyCom Mobile</h2></div>
+			<div class="decoration"></div>
+		</div>
+		<div class="header-clear"></div>
+		
+<body ng-controller="MainCtrl">
+	<div class="all-elements">
+    
+    <div class="signup-page-wrapper">
+        <a  class="signup-logo" > </a>
+       
+		<form ng-submit="checkLogin()">
+		    <div class="message-erreur-login" >
+			
+			<label  ng-bind="erreurRscr" ></label>
+			<label  ng-bind="erreurLog" ></label>
+			</div>
+			
+			<label class="login-label">Utilisateur</label>
+			<input class="signup-email" type="text" value="" name="user_name" id="user_name" ng-model="user_name" required/>
+			<label class="login-label">Mot de passe</label>
+			<input class="signup-password"  type="password" value=""  name="password" id="password" ng-model="password" required/>
+			<div  ng-controller="MyCtrl">
+			<select class="signup-email select " type="text" value="" name="Str" id="Str" ng-model="Str" ng-options="x.Commercial.nomStructure for x in empData">
+			   <option disabled selected value> -- Veuillez choisir une société -- </option>
+			</select>
+						
+			<input class="signup-email" type="text"  value="{{Str.Commercial.oid}}" name="Struct" id="Struct" style="display:none"/>	
+			</div>
+			<div class="one-half">
+			<input class="button button-green" type="submit" value="Se connecter"  name="btnLogin" id="btnLogin" ng-model="btnLogin" />
+			</div>
+			<div class="one-half2 last-column">
+			<input class="button button-red" type="button" onclick="exitFromApp()" value="Quitter"  name="BtnQuitter" id="BtnQuitter"/>
+			</div>
+		</form>
+       
+    </div>            
+</div>
+
+</div>		
+	</body>
+
+	</html>

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="Clients">
+<head>
+  
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="author" content="">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="apple-mobile-web-app-capable" content="yes"/>
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <!-- Syle CSS -->
+<link href="../../css/style.css"     		 rel="stylesheet" type="text/css">
+<link href="../../css/menu.css"     		 rel="stylesheet" type="text/css">
+<link href="../../css/framework2.css" 		 rel="stylesheet" type="text/css">
+<link href="../../css/owl.theme.css" 		 rel="stylesheet" type="text/css">
+<link href="../../css/swipebox.css"		 rel="stylesheet" type="text/css">
+<link href="../../css/font-awesome.css"	 rel="stylesheet" type="text/css">
+<link href="../../css/animate.css"			 rel="stylesheet" type="text/css">
+<!-- JavaScript -->
+<script src="../../js/jquery-1.10.2.js"></script>
+<script src="../../js/angular.min.js"></script>
+<script src="../../js/d3.min.js"></script>
+<script src="../../js/angular-charts.min.js"></script>
+<script src="../../js/JsClients/Main.Controller.Clt.Amc.js"></script>
+<script type="text/javascript" src="../../js/jquery.js"></script>
+<script type="text/javascript" src="../../js/custom.js"></script>
+<script type="text/javascript" charset="utf-8" src="../../cordova.js"></script>
+<script type="text/javascript" src="../../js/quitter.js"></script>
+
+<title>EpsyCom Mobile</title>
+
+
+
+  <!-- Custom CSS for the 'Heroic Features' Template -->
+  <link href="css/heroic-features.css" rel="cssheet">
+   
+</head>
+
+<body>
+
+  <!-- Loading page --> 
+	
+	<div id="preloader">
+		<div id="status">
+			<p class="center-text" style="text-align:center">
+				Chargement des données...
+			</p>
+		</div>
+	</div>
+	<!-- le corps de la page -->
+   
+	<div class="all-elements" style  = "overflow: visible; " >  
+		<div class="header">
+		 <a class="header-espace-clt"><h3>Espace Clients</h3></a> 
+			<div class="header-icons">
+				<a class="bg-green2 show-share-bottom" href="#"><i class="fa fa-share"></i></a>
+			  
+			</div>
+			<div class="decoration"></div>
+		</div>
+		
+		<div class="header-clear2"></div>
+		<h6><div id="Nom-Client" class="titleChoixInfo"> </div></h6>
+
+			<script>
+			var x = localStorage.getItem("ngStorage-NOM_CLT");
+			var res = "Client : " + x.replace(/"/g, "");
+			document.getElementById("Nom-Client").innerHTML = res;
+			</script>
+		<div class="container" ng-controller='MainController' >   
+        
+			<div class='charts' >
+			  <div ac-chart="chartType" ac-data="data" ac-config="config" id='chart' class='chart'></div>
+			</div>
+		</div>
+    
+	</div>
+    <!--Menu footer --> 
+	<!--Menu footer --> 
+	<div class="share-bottom">
+    <h3>Menu</h3>
+			<div class="share-socials-bottom">
+				
+				<a href="../../home-page.html">
+					<i class="fa fa-acceuil acceuil-color"></i>
+					Acceuil
+				</a>
+				<a href="../IndicateursCles/Indicateurs.cles.html">
+					<i class="fa fa-indicateurs indicateur-color"></i>
+					Indicateurs
+				</a>
+				<a href="../EspaceAchats/Espace.Achats.html">
+					<i class="fa fa-achats achats-color"></i>
+					Achats
+				</a>				
+				<a href="../EspaceStock/Espace.Stock.html">
+					<i class="fa fa-stock stock-color"></i>
+					Stock
+				</a>
+				<a href="../EspaceVentes/Espace.Ventes.html">
+					<i class="fa fa-ventes ventes-color"></i>
+					Ventes
+				</a>
+				<a href="../EspaceTresorerie/Espace.Tresorerie.html">
+					<i class="fa fa-tresorerie tresorerie-color"></i>
+					Trésorerie
+				</a>				
+				<a href="#">
+					<i class="fa fa-production production-color"></i>
+					Production
+				</a>
+				<a href="../EspaceFournisseurs/Espace.Fournisseurs.html">
+					<i class="fa fa-fournisseurs fournisseurs-color"></i>
+					Fournisseurs
+				</a>
+				<a href="../EspaceClients/Espace.Clients.html">
+					<i class="fa fa-clients clients-color"></i>
+					Clients
+				</a>
+				<a href="../EspaceArticles/Espace.Articles.html">
+					<i class="fa fa-articles articles-color"></i>
+					Articles
+				</a>
+				<a href="../../apropos.html">
+					<i class="fa fa-apropos apropos-color"></i>
+					A propos
+				</a> 
+				  
+				<a href="#" onClick="exitFromApp();" data-role="button" style="text-align:center">
+					
+					<i class="fa fa-quitter quitter-color"></i>
+					Quitter  </a>
+			</div>
+		<a href="#" class="close-share-bottom">Fermer</a>
+	</div>
+</body>
+</html>

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html ng-app="components">
+<head>
+
+    
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0 minimal-ui"/>
+<meta name="apple-mobile-web-app-capable" content="yes"/>
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+<title>EpsyCom Mobile</title>
+ <!-- Style Css -->
+<link href="../../css/style.css"    		 rel="stylesheet" type="text/css">
+<link href="../../css/menu.css"     		 rel="stylesheet" type="text/css">
+<link href="../../css/framework.css" 		 rel="stylesheet" type="text/css">
+<link href="../../css/owl.theme.css" 		 rel="stylesheet" type="text/css">
+<link href="../../css/swipebox.css"		 rel="stylesheet" type="text/css">
+<link href="../../css/font-awesome.css"	 rel="stylesheet" type="text/css">
+<link href="../../css/animate.css"			 rel="stylesheet" type="text/css">
+
+<!-- JavaScript -->
+<script type="text/javascript" src="../../js/jquery.js"></script>
+<script type="text/javascript" src="../../js/jqueryui.js"></script>
+<script type="text/javascript" src="../../js/framework.plugins.js"></script>
+<script type="text/javascript" src="../../js/jquery-1.10.2.js"></script>
+<script src="http://code.angularjs.org/snapshot/angular.js"></script>
+<script src="../../js/d3.min.js"></script>
+<script type="text/javascript" src="../../js/angularGaugeChart.js"></script>
+<script type="text/javascript" src="../../js/custom.js"></script>
+<script type="text/javascript" src="../../js/angular.min.js"></script>
+<script type="text/javascript" src="../../js/JsIndicateursCles/Jauge.Cmd.Frs.js"></script>
+<script type="text/javascript" charset="utf-8" src="../../cordova.js"></script>
+<script type="text/javascript" src="../../js/quitter.js"></script>
+
+</head>
+<body ng-controller="MyController" >
+<!-- Loading page --> 
+	
+	<div id="preloader">
+		<div id="status">
+			<p class="center-text">
+				Chargement des données...
+			</p>
+		</div>
+	</div>
+<div class="all-elements">  
+    <div class="header">
+        <a class="header-espace-clt"><h3>Indicateurs Clés</h3></a>
+			 <div class="header-icons">
+				<a class="bg-green2 show-share-bottom" href="#"><i class="fa fa-share"></i></a>
+			 </div>
+        <div class="decoration"></div>
+    </div>
+	
+    <div class="header-clear"></div>
+	
+	<div class="gauge1"><h5 style="text-decoration: underline;"> Commandes fournisseurs du mois en cours :</h5>
+	<div >
+    <gauge min="0" value="values.p" ></gauge>
+	</div> </div> <br/>
+	<div class="gauge2"><h5 style="text-decoration: underline;"> Commandes fournisseurs de l'année en cours :</h5>
+	<div >
+    <gauge1 min="0" value="values.o" ></gauge>
+	</div> </div> 
+	
+</div>
+	
+
+
+
+<div class="share-bottom">
+    <h3>Menu</h3>
+			<div class="share-socials-bottom">
+				
+				<a href="../../home-page.html">
+					<i class="fa fa-acceuil acceuil-color"></i>
+					Acceuil
+				</a>
+				<a href="../IndicateursCles/Indicateurs.cles.html">
+					<i class="fa fa-indicateurs indicateur-color"></i>
+					Indicateurs
+				</a>
+				<a href="../EspaceAchats/Espace.Achats.html">
+					<i class="fa fa-achats achats-color"></i>
+					Achats
+				</a>				
+				<a href="../EspaceStock/Espace.Stock.html">
+					<i class="fa fa-stock stock-color"></i>
+					Stock
+				</a>
+				<a href="../EspaceVentes/Espace.Ventes.html">
+					<i class="fa fa-ventes ventes-color"></i>
+					Ventes
+				</a>
+				<a href="../EspaceTresorerie/Espace.Tresorerie.html">
+					<i class="fa fa-tresorerie tresorerie-color"></i>
+					Trésorerie
+				</a>				
+				<a href="#">
+					<i class="fa fa-production production-color"></i>
+					Production
+				</a>
+				<a href="../EspaceFournisseurs/Espace.Fournisseurs.html">
+					<i class="fa fa-fournisseurs fournisseurs-color"></i>
+					Fournisseurs
+				</a>
+				<a href="../EspaceClients/Espace.Clients.html">
+					<i class="fa fa-clients clients-color"></i>
+					Clients
+				</a>
+				<a href="../EspaceArticles/Espace.Articles.html">
+					<i class="fa fa-articles articles-color"></i>
+					Articles
+				</a>
+				<a href="../../apropos.html">
+					<i class="fa fa-apropos apropos-color"></i>
+					A propos
+				</a> 
+				  
+				<a href="#" onClick="exitFromApp();" data-role="button" style="text-align:center">
+					
+					<i class="fa fa-quitter quitter-color"></i>
+					Quitter  </a>
+			</div>
+		<a href="#" class="close-share-bottom">Fermer</a>
+	</div>
+
+
+
+</body>
+</html>
