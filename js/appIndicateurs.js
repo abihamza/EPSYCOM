@@ -1,7 +1,7 @@
 var params = localStorage.getItem("OID_ORG");
 var app = angular.module('app', ["ngStorage"]);
 function MyCtrlCmdFrs($scope, $http, $localStorage) {
-						$http.get('http://151.80.56.163:8888/WebServiceCommercial/rest/services/getCmdFrsJaugeInJSON'+'/'+ params)
+						$http.get('http://132.148.133.254:8888/WebServiceCommercial/rest/services/getCmdFrsJaugeInJSON'+'/'+ params)
 						.success(function(response){
 						$scope.empData=response;
 						$scope.reverse=true;
@@ -17,7 +17,7 @@ function MyCtrlCmdFrs($scope, $http, $localStorage) {
 							});
 						}
 function MyCtrlCmdClt($scope, $http, $localStorage) {
-						$http.get('http://151.80.56.163:8888/WebServiceCommercial/rest/services/getCmdCltJaugeInJSON'+'/'+ params)
+						$http.get('http://132.148.133.254:8888/WebServiceCommercial/rest/services/getCmdCltJaugeInJSON'+'/'+ params)
 						.success(function(response){
 						$scope.empData=response;
 						$scope.reverse=true;
@@ -33,7 +33,7 @@ function MyCtrlCmdClt($scope, $http, $localStorage) {
 							});
 						}
 function MyCtrlFctClt($scope, $http, $localStorage) {
-						$http.get('http://151.80.56.163:8888/WebServiceCommercial/rest/services/getFctCltJaugeInJSON'+'/'+ params)
+						$http.get('http://132.148.133.254:8888/WebServiceCommercial/rest/services/getFctCltJaugeInJSON'+'/'+ params)
 						.success(function(response){
 						$scope.empData=response;
 						$scope.reverse=true;
@@ -49,7 +49,7 @@ function MyCtrlFctClt($scope, $http, $localStorage) {
 							});
 						}
 function MyCtrlEncClt($scope, $http, $localStorage) {
-						$http.get('http://151.80.56.163:8888/WebServiceCommercial/rest/services/getEncCltJaugeInJSON'+'/'+ params)
+						$http.get('http://132.148.133.254:8888/WebServiceCommercial/rest/services/getEncCltJaugeInJSON'+'/'+ params)
 						.success(function(response){
 						$scope.empData=response;
 						$scope.reverse=true;
@@ -65,7 +65,7 @@ function MyCtrlEncClt($scope, $http, $localStorage) {
 							});
 						}
 function MyCtrlRegFrs($scope, $http, $localStorage) {
-						$http.get('http://151.80.56.163:8888/WebServiceCommercial/rest/services/getRegFrsJaugeInJSON'+'/'+ params)
+						$http.get('http://132.148.133.254:8888/WebServiceCommercial/rest/services/getRegFrsJaugeInJSON'+'/'+ params)
 						.success(function(response){
 						$scope.empData=response;
 						$scope.reverse=true;
@@ -81,7 +81,7 @@ function MyCtrlRegFrs($scope, $http, $localStorage) {
 							});
 						}
 function MyCtrlFctFrs($scope, $http, $localStorage) {
-						$http.get('http://151.80.56.163:8888/WebServiceCommercial/rest/services/getFctFrsJaugeInJSON'+'/'+ params)
+						$http.get('http://132.148.133.254:8888/WebServiceCommercial/rest/services/getFctFrsJaugeInJSON'+'/'+ params)
 						.success(function(response){
 						$scope.empData=response;
 						$scope.reverse=true;
@@ -97,7 +97,7 @@ function MyCtrlFctFrs($scope, $http, $localStorage) {
 							});
 						}						
 function MyCtrlStock($scope, $http, $localStorage) {
-						$http.get('http://151.80.56.163:8888/WebServiceCommercial/rest/services/getSockJaugeInJSON'+'/'+ params)
+						$http.get('http://132.148.133.254:8888/WebServiceCommercial/rest/services/getSockJaugeInJSON'+'/'+ params)
 						.success(function(response){
 						$scope.empData=response;
 						$scope.reverse=true;
